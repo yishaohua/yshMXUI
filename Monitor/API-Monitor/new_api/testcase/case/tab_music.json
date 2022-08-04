@@ -1,0 +1,52 @@
+[
+    {
+        "config": {
+            "name": "/v1/tab/music",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tab_music",
+            "request": {
+                "url": "/v1/tab/music",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "tab"]},
+                {"ne": ["content.refreshPath", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "banners"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "banner"]},
+                {"ne": ["content.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    }
+]

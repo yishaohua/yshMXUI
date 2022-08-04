@@ -1,0 +1,137 @@
+{
+  "interfaces_V5": [
+     {
+      "attrDict":{
+	      "ids":["bde87385f473035e415632992d6d3b85","8f9bd8cc437fa09ae617a71e1ea79ff1"],
+		  "type":"playlist",
+          "num": 1
+      },
+      "metric":"DI_Service_playlist_twoids_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["ea58deba93ab8cf2da1b30ea44e7948e","3f3456049c9af17c8664405367c68b92"],
+		  "type":"language",
+          "num": 1
+      },
+      "attrDict":{
+	      "ids":["8f9bd8cc437fa09ae617a71e1ea79ff1"],
+		  "type":"playlist",
+          "num": 1
+      },
+      "metric":"DI_Service_language_playlist_twotypes_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["3f3456049c9af17c8664405367c68b92"],
+		  "type":"language",
+          "num": 1
+      },
+      "metric":"DI_Service_language_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["8f9bd8cc437fa09ae617a71e1ea79ff1"],
+		  "type":"playlist",
+          "num": 1
+      },
+      "metric":"DI_Service_playlist_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["19e37467019ec17621f07b591ea12b9a"],
+		  "type":"director",
+          "num": 1
+      },
+      "metric":"DI_Service_director_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["1ded45544895c4191ff13b8dee40b605"],
+		  "type":"movie",
+          "num": 1
+      },
+      "metric":"DI_Service_movie_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["10d1933fbf858c675f4f03bd46db2c06"],
+		  "type":"actor",
+          "num": 1
+      },
+      "metric":"DI_Service_actor_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["23acef3f9b9e8f976441decb61254b22"],
+		  "type":"album",
+          "num": 1
+      },
+      "metric":"DI_Service_album_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["16f5c16bea643c93970dafd0b3cedfd5","1b1b00bde34ec5bba3ec04695ae6de93"],
+		  "type":"short_video",
+          "num": 1
+      },
+      "metric":"DI_Service_short_video_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["2dfe98d86b75d4d34ef780c447433cfd"],
+		  "type":"season",
+          "num": 1
+      },
+      "metric":"DI_Service_season_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["e2d91201f8d3207b74a2d28072122dd4"],
+		  "type":"singer",
+          "num": 1
+      },
+      "metric":"DI_Service_singer_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["674bf00818fd9de4f8fc347911e3c4cb"],
+          "type":"song",
+          "num": 1
+      },
+      "metric":"DI_Service_song_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["d01198b1a7abd885eaa5d4059272168c"],
+		  "type":"tv_show",
+          "num": 1
+      },
+      "metric":"DI_Service_tv_show_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["d5786ef5d97368518b25fae7be0290db"],
+		  "type":"tv_show_video",
+          "num": 1
+      },
+      "metric":"DI_Service_tv_show_video_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["2c1c78080bdce163f692dac601f09d78"],
+		  "type":"publisher",
+          "num": 1
+      },
+      "metric":"DI_Service_publisher_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["dec362ee457c79496aa8fc5e7f265bff"],
+		  "type":"genre",
+          "num": 1
+      },
+      "metric":"DI_Service_genre_version_5_0"
+     }
+   ]
+}

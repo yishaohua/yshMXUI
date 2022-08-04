@@ -1,0 +1,337 @@
+[
+    {
+        "config": {
+            "name": "testset description",
+            "variables": {
+                "token": "EAAKDPz4ti0UBALNuBOOrGKIYrrX0zDVjxSP9rYPRyydBtPZAnZCh5vE3g2X1wbwV0lR2v6AxZAfw8NhlrSlBm6qftsUZAouAWN2XuX56cTQeebLkjhLCZBqcfEVMxNBcRBX81L75fDZCoIWHOaYDIfplPIjVKveKLQ6kmtg1gNMgvlMHAeN9VadspTpGB3O1GYnm5wgJjIBy4B4P2mCIFLOyD5y0r68OFb3k6nctHbLT4JrX2Dr53s",
+                "tvshow_id":"27b1081a947d839de4dd93ab4c48a5eb",
+                "publisher_id":"25b000aad8a338356b1e9a2e8a2c3c5d"
+            },
+            "request": {
+                "base_url": "https://mxbeta-feeds-staging.zenmxapps.com",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "testb655-605b-41f1-bd16-ce2e168c02b91171887",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "punjabi;bengali;kannada",
+                    "X-Platform": "android",
+                    "Content-Type": "application/json; charset=utf-8"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_session",
+            "request": {
+                "url": "/v3/session",
+                "json": {
+                    "token": "$token",
+                    "type": "login.facebook"
+                },
+                "method": "POST"
+            },
+            "extract": [
+                {"sessionId": "content.id"}
+            ],
+            "validate": [
+                {"eq": ["content.type", "session"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.userId", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.source", ""]},
+                {"ne": ["content.avatar", ""]},
+                {"ne": ["content.preferLang", ""]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_setting",
+            "request": {
+                "url": "/v3/setting",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "POST",
+                "json": {
+                    "preferLang": [
+                        "kannada",
+                        "bengali",
+                        "punjabi"
+                    ]
+                }
+            },
+            "validate": [
+                {"eq": ["status_code",200]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_subsc_publishers",
+            "request": {
+                "url": "/v3/subsc/publishers",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "card_publishers"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.resources.0.type", "publisher_lite"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.icon", ""]},
+                {"ne": ["content.resources.0.selfPic", ""]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_subsc_singers",
+            "request": {
+                "url": "/v3/subsc/singers",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "card_singers"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.resources.0.type", "mv_singer_lite"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.icon", ""]},
+                {"ne": ["content.resources.0.selfPic", ""]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_subsc_tvshows",
+            "request": {
+                "url": "/v3/subsc/tvshows",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "card_tvshows"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.resources.0.type", "tv_show_lite"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.icon", ""]},
+                {"ne": ["content.resources.0.selfPic", ""]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_abtest",
+            "request": {
+                "url": "/v3/abtest",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.testGroup.0.id", "homeStyle"]},
+                {"ne": ["content.testGroup.0.strategy", ""]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_history",
+            "request": {
+                "url": "/v3/history",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "card_history"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0",""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.id",""]},
+                {"ne": ["content.resources.0.name",""]},
+                {"ne": ["content.resources.0.picList",""]},
+                {"ne": ["content.resources.0.playCount",""]},
+                {"ne": ["content.resources.0.duration",""]},
+                {"ne": ["content.resources.0.publishTime",""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_favourite",
+            "request": {
+                "url": "/v3/favourite",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "card_favourite"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0",""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.id",""]},
+                {"ne": ["content.resources.0.name",""]},
+                {"ne": ["content.resources.0.picList",""]},
+                {"ne": ["content.resources.0.duration",""]},
+                {"ne": ["content.resources.0.playCount",""]},
+                {"ne": ["content.resources.0.publishTime",""]}
+            ] 
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_publisher_subscribe_remove",
+            "request": {
+                "url": "/v3/publisher/$publisher_id/subscribe",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "POST",
+                "json": {
+                    "action": "remove"
+                }
+            },
+            "validate": [
+                {"eq": ["content", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_publisher_subscribe_add",
+            "request": {
+                "url": "/v3/publisher/$publisher_id/subscribe",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "POST",
+                "json": {
+                    "action": "add"
+                }
+            },
+            "validate": [
+                {"eq": ["content", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_publisher",
+            "request": {
+                "url": "/v3/publisher/$publisher_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.icon", ""]},
+                {"ne": ["content.subscribeCount", ""]},
+                {"ne": ["content.selfPic", ""]},
+                {"ne": ["content.ifSubscribe", ""]},
+                {"eq": ["content.type", "publisher"]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_tvshow_subscribe_remove",
+            "request": {
+                "url": "/v3/tvshow/$tvshow_id/subscribe",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "POST",
+                "json": {
+                    "action": "remove"
+                }
+            },
+            "validate": [
+                {"eq": ["content", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_tvshow_subscribe_add",
+            "request": {
+                "url": "/v3/tvshow/$tvshow_id/subscribe",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "POST",
+                "json": {
+                    "action": "add"
+                }
+            },
+            "validate": [
+                {"eq": ["content", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_tvshow",
+            "request": {
+                "url": "/v3/tvshow/$tvshow_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.icon", ""]},
+                {"ne": ["content.desc", ""]},
+                {"ne": ["content.subscribeCount", ""]},
+                {"ne": ["content.selfPic", ""]},
+                {"eq": ["content.type", "tv_show"]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "parameters": [
+                {"uainfo_check_paths": ["v_mv_youtube/dba3b433a5c3361ec07f1dc0bd9b42ef","v_short_youtube/227646794ccc5db0565f7cd0c22a9dfd"]}
+            ],
+            "name": "qa_check_v3_uainfo/mv_youtube-short_youtube_2",
+            "request": {
+                "url": "/v3/uainfo/$uainfo_check_paths",
+                "headers": {
+                    "Authorization": "$sessionId"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "user_action_info_on_feed"]},
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.upcount", ""]},
+                {"ne": ["content.downcount", ""]},
+                {"ne": ["content.updown", ""]},
+                {"ne": ["content.isfav", ""]}
+            ]
+        }
+    }
+]

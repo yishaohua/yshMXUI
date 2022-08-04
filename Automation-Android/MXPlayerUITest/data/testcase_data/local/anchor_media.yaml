@@ -1,0 +1,6 @@
+test_get_username:
+  name: "登录"
+
+test_choose_content_language:
+  toast: "保存失败，请重试。"
+#  toast: "您首选的内容语言已保存。"

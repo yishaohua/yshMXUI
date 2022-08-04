@@ -1,0 +1,874 @@
+{
+  "Short_Video": [
+    {
+      "attrDict":{
+          "interfaceName":"popular_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+          "resourceId": "fd84494949d4c91cffe74c73ebc46f44",
+          "resourceType": "publisher",
+          "filterId": "fd84494949d4c91cffe74c73ebc46f44",
+          "num": 2,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 80000,
+      "metric":"mx_main_popular_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "other_short_videos_of_the_publisher_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "CN",
+        "networkStatus": "3G",
+        "num": 5,
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "resourceId": "2d293ef953c461f8b4d9aefbc125bcf6",
+        "resourceType": "publisher",
+        "filterId": "e73313307e8ff1f8a3035eb81145ec78",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 150000,
+      "metric": "mx_main_other_short_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "you_may_also_like_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "CN",
+        "networkStatus": "3G",
+        "resourceId": "29353ddd110925f40d8e95a2a06f21dd",
+        "resourceType": "short_video",
+        "filterId": "29353ddd110925f40d8e95a2a06f21dd",
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "num": 5,
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 150000,
+      "metric": "mx_main_you_may_also_like_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "popular_short_videos_of_the_publisher_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 5,
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "resourceId": "35b3e1448664e355f9799e9c4cc9b4fd",
+        "resourceType": "publisher",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 160000,
+      "metric": "mx_main_popular_short_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"lastest_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "aa14d2321cfcda510324f1866d5fb31d",
+          "resourceType": "publisher",
+          "num": 5,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 160000,
+      "metric":"mx_main_lastest_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mxbeta_main_nullcard_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "num":8,
+          "cardId": "nullCard",
+          "tabId": "2",
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 220000,
+      "metric":"mxbeta_main_nullcard_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"similar_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "num": 1,
+          "resourceId": "0c78d12782ced3a847c8973936e66677",
+          "resourceType": "publisher",
+          "filterId": "0c78d12782ced3a847c8973936e66677",
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 50000,
+      "metric":"mx_main_similar_publisher_version_1_0"
+    }
+],
+  "Tv_Show": [
+    {
+      "attrDict": {
+        "interfaceName": "lastest_seasons_of_the_tvshow_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceId": "b2b9b935832a6b9f7847db70ac36b216",
+        "resourceType": "tv_show",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_lastest_seasons_of_the_tvshow_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "episodes_of_the_season_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceId": "551c04c35d11631c43dcf5c64946c91a",
+        "resourceType": "season",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_episodes_of_the_season_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "tv_shows_of_the_publisher_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "publisher",
+        "resourceId": "74c37702e9a0266c4737475d70ff920f",
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_tv_shows_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"similar_tvshows_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "e74a1027ed48dd9f67c69e2160dfe795",
+          "resourceType": "tv_show",
+          "filterId": "e74a1027ed48dd9f67c69e2160dfe795",
+          "entranceType": "tv_show_video",
+          "num": 1,
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 50000,
+      "metric":"mx_main_similar_tvshows_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"first_season_of_the_tvshow_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "47ec86630f611cc5cf9be0f36e96601c",
+          "resourceType": "tv_show",
+          "num": 1,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 50000,
+      "metric":"mx_main_first_season_of_the_tvshow_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"around_of_playing_episode_of_the_season_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+          "resourceId": "14756bb9640e6d9c611cf0b9d534e0d5",
+          "resourceType": "season",
+          "filterId": "7378f33509a9bad0d220c344c4ecca4e",
+          "num": 1,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 60000,
+      "metric":"mx_main_around_of_playing_episode_of_the_season_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mxbeta_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "cardId": "acbec72fac7107feb702409194886ee1",
+          "tabId": "87c3ddc974dcf12294e9412bec44b097",
+          "num": 10,
+          "clientVersion": "13100001097",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 2000000,
+      "metric":"mx_main_personal_recommend_version_1_0"    
+    }
+  ],
+  "Music": [
+    {
+      "attrDict": {
+        "interfaceName": "other_songs_of_the_album_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "album",
+        "resourceId": "dd23eb70e192a3bc76bf1ab95bab693f",
+        "filterId": "bc35e80e2d0a0458df888622df4037a9",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 60000,
+      "metric": "mx_main_other_songs_of_the_album_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "popular_songs_of_the_artist_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "singer",
+        "resourceId": "98024e0ecfb9961c34b2e5e0c6844b76",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_popular_songs_of_the_artist_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "songs_of_the_album_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "album",
+        "resourceId": "4066d8bfb6c6ab784602953f689c57f0",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_songs_of_the_album_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"songs_of_the_album_no_pagination_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "539023ca71e6d4b4cb0d982f477c5ee3",
+          "resourceType": "album",
+          "num": 2,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 280000,
+      "metric":"mx_main_songs_of_the_album_no_pagination_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"songs_of_the_playlist_no_pagination_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "85e348b09b90271c388dfa692dc128e8",
+          "resourceType": "playlist",
+          "num": 2,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 200000,
+      "metric":"mx_main_songs_of_the_playlist_no_pagination_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "albums_of_the_artist_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "singer",
+        "resourceId": "98024e0ecfb9961c34b2e5e0c6844b76",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_albums_of_the_artist_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "popular_albums_of_the_artist_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "singer",
+        "resourceId": "98024e0ecfb9961c34b2e5e0c6844b76",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_popular_albums_of_the_artist_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "albums_of_the_publisher_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "publisher",
+        "resourceId": "ecab775087a1bf4d3f0d2422d07948e6",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_albums_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "songs_of_the_playlist_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 3,
+        "resourceType": "playlist",
+        "resourceId": "85e348b09b90271c388dfa692dc128e8",
+        "filterId": "819a5106890914e14e4fa319ccb2c76e",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 100000,
+      "metric": "mx_main_songs_of_the_playlist_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "artists_of_the_publisher_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "publisher",
+        "resourceId": "AWQhzDNOqLF58kOlRF4K",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_artists_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"similar_artists_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["hi", "en"],
+          "resourceId": "aaaa9f9a42da24d1e96c254ed68a0752",
+          "resourceType": "artist",
+          "filterId": "aaaa9f9a42da24d1e96c254ed68a0752",
+          "entranceType": "singer",
+          "num": 1,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 50000,
+      "metric":"mx_main_similar_artists_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "similar_albums_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "genresList": ["30a79433f60555997a43d643f77d6cfa"],
+        "entranceType": "album",
+        "resourceId": "4066d8bfb6c6ab784602953f689c57f0",
+        "resourceType": "album",
+        "filterId": "4066d8bfb6c6ab784602953f689c57f0",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_similar_albums_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"similar_songs_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "75bf6a263e6152e062fc5ae2ee8a3127",
+          "resourceType": "song",
+          "filterId": "75bf6a263e6152e062fc5ae2ee8a3127",
+          "num":1,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 50000,
+      "metric":"mx_main_similar_songs_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "similar_playlist_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceId": "85e348b09b90271c388dfa692dc128e8",
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "resourceType": "playlist",
+        "filterId": "85e348b09b90271c388dfa692dc128e8",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_similar_playlist_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"lastest_songs_of_the_artist_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "num":4,
+          "resourceId": "79cac53a612457cbbed5526a2ae93c2e",
+          "resourceType": "singer",
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 130000,
+      "metric":"mx_main_lastest_songs_of_the_artist_version_1_0"
+    }
+ ],
+  "Movie": [
+    {
+      "attrDict": {
+        "interfaceName": "movies_of_the_publisher_version_1_0",
+        "type": 0,
+        "platformId": "3",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 1,
+        "resourceType": "publisher",
+        "resourceId": "be33e82a8c066fe56887af0d3f59a405",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_movies_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict": {
+        "interfaceName": "similar_movie_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "CN",
+        "language": "zh",
+        "networkStatus": "3G",
+        "num": 1,
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"],
+        "genresList": ["dd1bbd57f60ddcb366d3c0c419c1ef16", "3c8e8cb252de6ea1b77ba9b9a7c57ec6"],
+        "resourceId": "9fba766660a0464c2210b4fae1bdc730",
+        "resourceType": "movie",
+        "entranceType": "movie",
+        "filterId": "9fba766660a0464c2210b4fae1bdc730",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 50000,
+      "metric": "mx_main_similar_movie_version_1_0"
+    },
+    {
+      "attrDict":{
+        "interfaceName":"mxbeta_main_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "US",
+        "networkStatus": "3G",
+        "num":20,
+        "cardId": "e933e3be8a4f713a5aa29d458c2afa00",
+        "tabId": "df009e7b9170e4c446ea6fd4dc815e28",
+        "clientVersion": "1310001090",
+        "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 60000,
+      "metric":"mx_main_personal_recommend_hotTest_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mxbeta_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "cardId": "ce9a98bf1c9846a419f3bbf76443c627",
+          "tabId": "87c3ddc974dcf12294e9412bec44b097",
+          "num":10,
+          "clientVersion": "131000010975",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 30000,
+      "metric":"mx_main_personal_recommend_version_1_0"
+    }
+  ],
+  "live_tv":[
+    {
+      "attrDict":{
+          "interfaceName":"live_card_recommend_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "0424.TV9Gujarati.in",
+          "resourceType": "live_channel",
+          "num": 1,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 50000,
+      "metric":"mx_main_live_card_recommend_main_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"get_all_livechannels_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "num":10,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 2000000,
+      "metric":"mx_main_get_all_livechannels_version_1_0"
+    }
+  ],
+  "banner":[
+    {
+      "attrDict":{
+          "interfaceName":"banner_version_2_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "87c3ddc974dcf12294e9412bec44b097",
+          "clientVersion": "1310001079",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"fetchBanner",
+      "resCheck":"bannerList",
+      "lenthCheck": 10000000,
+      "metric":"mx_main_banner_version_2_0_home"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"banner_version_2_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "72d9820f7da319cbb789a0f8e4b84e7e",
+          "clientVersion": "1310001079",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"fetchBanner",
+      "resCheck":"bannerList",
+      "lenthCheck": 7000000,
+      "metric":"mx_main_banner_version_2_0_music"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"banner_version_2_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "feacc8bb9a44e3c86e2236381f6baaf3",
+          "clientVersion": "1310001079",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"fetchBanner",
+      "resCheck":"bannerList",
+      "lenthCheck": 5000000,
+      "metric":"mx_main_banner_version_2_0_shows"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"banner_version_2_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "08f8fce450d1ecf00efa820f611cf57b",
+          "clientVersion": "1310001079",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"fetchBanner",
+      "resCheck":"bannerList",
+      "lenthCheck": 6000000,
+      "metric":"mx_main_banner_version_2_0_movies"
+    }
+  ],
+  "tabs":[
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_version_4_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "87c3ddc974dcf12294e9412bec44b097",
+          "num": 10,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tab_cardList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_version_home_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_version_4_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "72d9820f7da319cbb789a0f8e4b84e7e",
+          "num": 10,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tab_cardList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_version_music_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_version_4_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "08f8fce450d1ecf00efa820f611cf57b",
+          "num": 10,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tab_cardList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_version_movie_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_version_4_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "4e82d34404a477419f811cd303e216e7",
+          "num": 5,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tab_cardList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_version_buzz_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_version_4_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "feacc8bb9a44e3c86e2236381f6baaf3",
+          "num": 10,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tab_cardList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_version_tv_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_version_4_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "tabId": "7694f56f59238654b3a6303885f9166f",
+          "num": 10,
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tab_cardList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_version_webshows_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"fetch_tabs_list_version_2_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "clientVersion": "1310001079"
+      },
+      "reqFunc":"fetchTab",
+      "resCheck":"tabList",
+      "lenthCheck": 200000,
+      "metric":"mx_main_fetch_tabs_list_version_2_0"
+    }
+  ],
+  "browse":[
+    {
+      "attrDict": {
+        "interfaceName": "browse_item_version_1_0",
+        "type": 0,
+        "platformId": "1",
+        "country": "IN",
+        "networkStatus": "3G",
+        "num": 10,
+        "tabId": "87c3ddc974dcf12294e9412bec44b097",
+        "resourceType": "song",
+        "clientVersion": "1310001079"
+      },
+      "reqFunc": "recommend",
+      "resCheck": "result",
+      "lenthCheck": 300000,
+      "metric": "mx_main_browse_item_version_1_0"
+    }
+  ],
+  "offline":[
+    {
+      "attrDict":{
+          "interfaceName":"offline_recommend_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "serviceName": "AndroidAPI",
+          "num":1,
+          "clientVersion": "1310001096",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqType":"offlineRequest",
+      "reqFunc":"offlineRecommend",
+      "resCheck":"offlineResultList",
+      "lenthCheck": 40000,
+      "metric":"mx_main_offline_recommend_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"offline_local_relevant_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "US",
+          "networkStatus": "3G",
+          "serviceName": "AndroidAPI",
+          "num":1,
+          "clientVersion": "1310001096",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqType":"offlineRequest",
+      "reqFunc":"offlineRecommend",
+      "resCheck":"offlineResultList",
+      "lenthCheck": 40000,
+      "metric":"mx_main_offline_local_relevant_version_1_0"
+    }
+  ]
+}

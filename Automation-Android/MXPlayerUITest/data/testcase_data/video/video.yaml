@@ -1,0 +1,51 @@
+test_all_tab_text:
+  tab_list:
+    - '   '
+    - 'TV'
+    - 'WEB SHOWS'
+    - 'MOVIES'
+    - 'MX VDESI'
+    - 'NEWS'
+    - 'MUSIC'
+    - 'BUZZ'
+
+test_click_home:
+  card_title:
+    - "Shows in Demand"
+    - "MX Original Web Shows"
+    - "You May Like"
+    - "待看列表"
+
+test_click_shows:
+  card_title: "Trailers"
+
+test_click_movies:
+  card_title: "MX Top Picks"
+#  card_title: "Handpicked Movies  "
+
+test_click_mx_vdesi:
+  card_title: "Best Shows on MX"
+
+test_click_news_tab:
+  card_title: "Live News Channels"
+
+test_click_music_tab:
+  card_title: "Indian Pop Hits"
+#  card_title: "MX Top Hits"
+
+test_slide_down_page:
+  cards_title:
+    - "继续观看"
+    - "待看列表"
+    - "You May Like"
+    - "MX Original Web Shows"
+    - "Beat Shows on MX "
+    - "Top 10 This Week!"
+
+test_movies_slide_pages:
+  cards_title:
+    - "MX Top Picks"
+    - "Top 10 in Movies"
+    - "Trending Movies on MX"
+    - "Blockbuster Movies"
+    - "Today's Recommendations"

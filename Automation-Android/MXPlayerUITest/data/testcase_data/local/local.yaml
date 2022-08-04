@@ -1,0 +1,14 @@
+test_to_local_page:
+  title: "文件夹"
+
+test_search_input:
+  - "sky"
+  - "Mx Takatak video"
+
+test_view_menu_content:
+  title: "视图模式"
+
+test_tab_title_show:
+  - "Famous Shows"
+  - "Best Songs"
+  - "Top Games"

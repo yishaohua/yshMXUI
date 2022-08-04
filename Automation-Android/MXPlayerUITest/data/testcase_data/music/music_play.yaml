@@ -1,0 +1,41 @@
+test_abplay:
+  duration: 5
+
+test_play_speed:
+  speed_list:
+    - "0.5x"
+    - "1.5x"
+
+test_add_to_favorite:
+  toast: "已添加歌曲到您的最爱"
+
+test_shuffle_play:
+  toast: "随机"
+
+test_rotate_play:
+  toast: "单曲循环"
+
+test_search_lyrics:
+  title: "Search Lyrics"
+
+test_detail_click_playlist:
+  title: "播放队列"
+
+test_click_shuffle:
+  toast:
+    - "单曲循环"
+    - "随机"
+    - "全部循环"
+
+test_add_playlist:
+  playlist: "test2"
+  toast: "已添加 1 首歌曲到播放列表“test2”"
+
+test_click_sleep_timer:
+  title: "定时关闭"
+
+test_set_sleep_after_30min:
+  toast: "您的睡眠定时器现在已设置完毕"
+
+test_set_custom:
+  toast: "您的睡眠定时器现在已设置完毕"

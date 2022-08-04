@@ -1,0 +1,58 @@
+[
+    {
+        "config": {
+            "name": "/v1/detail[GET]",
+            "variables": {
+                "movie_film_id":"97305a59f0dc85a9c697c1e1fe1c7c66"
+            },
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "hindi",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_movie_film_detail",
+            "request": {
+                "url": "/v1/detail/movie_film/$movie_film_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "movie_film"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "movie_film"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    }
+]

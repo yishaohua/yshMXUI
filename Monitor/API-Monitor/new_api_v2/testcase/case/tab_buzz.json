@@ -1,0 +1,59 @@
+[
+    {
+        "config": {
+            "name": "/v1/tab/buzz",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tab_buzz",
+            "request": {
+                "url": "/v1/tab/buzz",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"eq": ["content.type", "tab"]},
+                {"ne": ["content.refreshPath", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "card_mini_list"]},
+                {"len_ge": ["content.resources.0.resources", 5]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "card_mini_profile"]},
+                {"ne": ["content.resources.0.resources.0.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources.0.resources.0.nextUrl", ""]},
+                {"eq": ["content.resources.1.type", "paging"]},
+                {"ne": ["content.resources.1.nextUrl", ""]},
+                {"len_ge": ["content.resources.1.resources", 1]},
+                {"ne": ["content.resources.1.resources.0.id", ""]},
+                {"ne": ["content.resources.1.resources.0.name", ""]},
+                {"eq": ["content.resources.1.resources.0.type", "shortvideo_video"]},
+                {"ne": ["content.resources.1.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.1.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.resources.1.resources.0.publisher.icon", ""]},
+                {"ne": ["content.resources.1.resources.0.seek_thumbnail.0.url", ""]}
+
+            ]
+        }
+    }
+]

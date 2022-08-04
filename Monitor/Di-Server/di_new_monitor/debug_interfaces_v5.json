@@ -1,0 +1,116 @@
+{
+  "interfaces_V5": [
+     {
+      "attrDict":{
+	      "ids":["85e348b09b90271c388dfa692dc128e8"],
+		  "type":"playlist",
+          "num": 1
+      },
+      "metric":"DI_Service_playlist_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["97305a59f0dc85a9c697c1e1fe1c7c66"],
+		  "type":"movie",
+          "num": 1
+      },
+      "metric":"DI_Service_movie_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["c9389f588073a8a5ee3dced20374c1bc"],
+		  "type":"short_video",
+          "num": 1
+      },
+      "metric":"DI_Service_short_video_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["te"],
+		  "type":"language",
+          "num": 1
+      },
+      "metric":"DI_Service_language_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["5492e591ea1ce9038c80c8c2c1b797f7"],
+		  "type":"genre",
+          "num": 1
+      },
+      "metric":"DI_Service_genre_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["e7ea1ed6e66d624a91709da74ea1cb48"],
+		  "type":"actor",
+          "num": 1
+      },
+      "metric":"DI_Service_actor_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["bfd5ddaded35e0104ca5fe392db0e9f2"],
+		  "type":"director",
+          "num": 1
+      },
+      "metric":"DI_Service_director_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["72680dce6cccadbf80c116166f64da79"],
+		  "type":"song",
+          "num": 1
+      },
+      "metric":"DI_Service_song_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["1b0ff1aff76139eb57bf30567a10a718"],
+		  "type":"album",
+          "num": 1
+      },
+      "metric":"DI_Service_album_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["940247a21dfe9c768e643c12d60d4eb3"],
+		  "type":"singer",
+          "num": 1
+      },
+      "metric":"DI_Service_singer_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["551c04c35d11631c43dcf5c64946c91a"],
+		  "type":"season",
+          "num": 1
+      },
+      "metric":"DI_Service_season_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["b2b9b935832a6b9f7847db70ac36b216"],
+		  "type":"tv_show",
+          "num": 1
+      },
+      "metric":"DI_Service_tv_show_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["d37f99866c4507b808050e1bbc024ea7"],
+		  "type":"tv_show_video",
+          "num": 1
+      },
+      "metric":"DI_Service_tv_show_video_version_5_0"
+    },
+     {
+      "attrDict":{
+	      "ids":["6b74f54129d4e686a9f280be2dcf0343"],
+		  "type":"publisher",
+          "num": 1
+      },
+      "metric":"DI_Service_publisher_version_5_0"
+    }
+   ]
+}

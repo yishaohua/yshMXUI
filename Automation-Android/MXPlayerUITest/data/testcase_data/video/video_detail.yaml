@@ -1,0 +1,14 @@
+test_share_whatsapp_toast:
+  toast: "请安装WhatsApp"
+
+test_click_quality:
+  quality: "720p"
+
+test_click_speed:
+  speed: "1.5x"
+
+test_click_subtitles:
+  subtitles: "English"
+
+test_share_copy:
+  toast: "已复制 MX 播放器链接到剪贴板"

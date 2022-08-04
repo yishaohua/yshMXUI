@@ -1,0 +1,43 @@
+[
+    {
+        "config": {
+            "name": "v1_paging_card_subscribe",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "authorization":"${get_auth()}",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_card_subscribe",
+            "request": {
+                "url": "/v1/paging/card/subscribe",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    }
+]

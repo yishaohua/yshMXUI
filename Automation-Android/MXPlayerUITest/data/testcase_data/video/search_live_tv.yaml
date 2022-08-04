@@ -1,0 +1,13 @@
+test_choose_language_filter:
+  language: "English"
+
+test_choose_category_filter:
+  category: "Music"
+
+test_multiple_choice:
+  language:
+    - "Hindi"
+    - "English"
+  category:
+    - "GEC"
+    - "Movies"

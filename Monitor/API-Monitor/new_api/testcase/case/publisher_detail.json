@@ -1,0 +1,58 @@
+[
+    {
+        "config": {
+            "name": "/v1/detail[GET]",
+            "variables": {
+                "publisher_id":"6b74f54129d4e686a9f280be2dcf0343"
+            },
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_publisher_detail",
+            "request": {
+                "url": "/v1/detail/publisher/$publisher_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.profile.type", "publisher"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.icon", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+
+                {"len_ge": ["content.relatedCards", 2]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 2]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.type", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    }
+]

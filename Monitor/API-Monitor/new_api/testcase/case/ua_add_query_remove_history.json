@@ -1,0 +1,92 @@
+[
+    {
+        "config": {
+            "name": "/v1/ua/add",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "authorization":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IntmYn17MTA5NDQyNzE5OTk1MzU4fSIsImNyZWF0aW1lIjoxNTMzNzAwMjQ3fQ.b7uHzDIimsWB3Id9BOlwIOkiKNbj1XsmpucUs6UdOQc",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_add_history",
+            "request": {
+                "url": "/v1/ua/add/history",
+                "json": {
+                    "resources": [
+                        {
+                            "resourceType": "tvshow_episode",
+                            "videoId": "e07191b45f8600dda626dfe8ea5ba7c8",
+                            "watchAt": 0
+                        },
+                        {
+                            "resourceType": "tvshow_episode",
+                            "videoId": "f8a6f6bfc241225e4a07874bfd7c6608",
+                            "watchAt": 0
+                        }
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_query_history",
+            "request": {
+                "url": "/v1/ua/query/history",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "history"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "paging"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.type", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_remove_history",
+            "request": {
+                "url": "/v1/ua/remove/history",
+                "json": {
+                    "resourceIds": [
+                        "e07191b45f8600dda626dfe8ea5ba7c8"
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    }
+]

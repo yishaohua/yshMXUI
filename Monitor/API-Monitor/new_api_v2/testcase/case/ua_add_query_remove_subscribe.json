@@ -1,0 +1,85 @@
+[
+    {
+        "config": {
+            "name": "/v1/ua/add",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "x-resolution":"1080x1920",
+                    "authorization":"${get_auth()}",
+                    "x-density":"3.0",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_add_subscribe",
+            "request": {
+                "url": "/v1/ua/add/subscribe",
+                "json": {
+                    "resources": [
+                        {
+		                    "id": "ad9031300d4ce990db518b667e530813",
+	                    	"type": "music_artist"
+                        }
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_query_subscribe",
+            "request": {
+                "url": "/v1/ua/query/subscribe",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "subscribe"]},
+                {"eq": ["content.resources.0.type", "paging"]},
+                {"ne": ["content.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.type", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_remove_subscribe",
+            "request": {
+                "url": "/v1/ua/remove/subscribe",
+                "json": {
+                    "resourceIds": [
+                        "c1d0e50a077e63198bed4e093dc1ebc6"
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    }
+]

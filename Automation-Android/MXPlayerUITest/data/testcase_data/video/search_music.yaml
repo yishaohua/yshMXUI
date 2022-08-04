@@ -1,0 +1,30 @@
+test_queue_items_text:
+  items:
+    - "人气"
+    - "新旧"
+
+test_queue_by_time:
+  item: "新旧"
+
+test_choose_language_filter:
+  language: "English"
+
+test_choose_genre_filter:
+  genre: "Jazz"
+
+test_choose_actor_filter:
+  actor: "Nutan"
+
+test_choose_singer_filter:
+  singer: "Seema Mishra"
+
+test_multiple_choice:
+  language:
+    - "Hindi"
+  genre:
+    - "Funk"
+    - "R&B"
+  actor:
+    - "Nutan"
+  singer:
+    - "Various Artist"

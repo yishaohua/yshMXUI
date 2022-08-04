@@ -1,0 +1,80 @@
+{
+  "interfaces_mx_main": [
+     {
+      "attrDict":{
+          "interfaceName":"other_short_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "num":10,
+          "resourceId": "8c49f38a73d58931a4440c4770e79abb",
+          "resourceType": "publisher",
+          "filterId": "68cfdb1b9418bd2341569a48faa7f14c"
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "metric":"mx_main_other_short_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mxbeta_main_nullcard_version_1_0",
+          "cardId": "nullCard",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "num":10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "metric":"mxbeta_main_nullcard_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mxbeta_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "cardId": "9fe26dc214cf41870a73c1c6c88c675e",
+          "cardName": "For You",
+          "num":10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "metric":"For_You_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"other_short_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "0c78d12782ced3a847c8973936e66677",
+          "resourceType": "publisher",
+          "filterId": "67c48a683bb8c5b50bbcaf11d13e35c1",
+          "num":10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "metric":"other_short_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"you_may_also_like_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "country": "CN",
+          "networkStatus": "3G",
+          "resourceId": "0c78d12782ced3a847c8973936e66677",
+          "resourceType": "publisher",
+          "num":10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "metric":"you_may_also_like_version_1_0"
+    }
+  ]
+}

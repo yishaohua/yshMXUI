@@ -1,0 +1,23 @@
+test_default_text:
+  text: "此播放列表中无歌曲。"
+
+test_first_add_songs:
+  search_song: "love"
+  toast: "已添加"
+
+test_options_add_songs:
+  data:
+    -
+      search_song: "maah"
+      result_songs: "Maah"
+    -
+      search_song: "morning"
+      result_songs: "Morning"
+  toast: "已添加"
+
+test_options_add_local_songs:
+  toast: "已添加"
+  text: "找不到媒体文件。"
+
+test_clear_all:
+  songs_num: "无歌曲"

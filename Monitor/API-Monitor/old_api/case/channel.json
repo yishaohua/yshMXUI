@@ -1,0 +1,123 @@
+[
+    {
+        "config": {
+            "name": "testset description",
+            "request": {
+                "base_url": "https://mxbeta-feeds-staging.zenmxapps.com",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "testb655-605b-41f1-bd16-ce2e168c02b91171887",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "punjabi;bengali;kannada;malayalm;tamil;telugu;english;hindi;marathi",
+                    "X-Platform": "android"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "parameters": [
+                {"channel_name": ["TV%20Shows%20&%20Drama", "Featured","News","Toons","Sports","Tech%20World","Bollywood%20Hulchul","Bollywood%20Hulchul?from=more&nextToken=$nextToken","Comedy%20Ke%20Funde","Comedy%20Ke%20Funde?from=more&nextToken=$nextToken","Dance%20Pe%20Chance","Dance%20Pe%20Chance?from=more&nextToken=$nextToken","Filmy%20Duniya","Filmy%20Duniya?from=more&nextToken=$nextToken","PAN%20India%20Music","PAN%20India%20Music?from=more&nextToken=$nextToken","South%20Cinema","South%20Cinema?from=more&nextToken=$nextToken","Mix%20Masala","Mix%20Masala?from=more&nextToken=$nextToken","Most%20Popular","Most%20Popular?from=more&nextToken=$nextToken"]}
+            ],
+            "name": "qa_check_v3_channel_Featured_27",
+            "request": {
+                "url": "/v3/channel/$channel_name",
+                "method": "GET"
+            },
+            "extract": [
+                {"nextToken": "content.nextToken"}
+            ],
+            "validate": [
+                {"eq": ["content.type", "channelres"]},
+                {"ne": ["content.nextToken", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.v_short_youtube",""]},
+                {"ne": ["content.resources.0.v_short_youtube.videoId",""]},
+                {"ne": ["content.resources.0.v_short_youtube.srcURL",""]},
+                {"ne": ["content.resources.0.v_short_youtube.shareURL",""]},
+                {"ne": ["content.resources.0.publisher",""]},
+                {"ne": ["content.resources.0.publisher.type",""]},
+                {"ne": ["content.resources.0.publisher.id",""]},
+                {"ne": ["content.resources.0.publisher.name",""]},
+                {"ne": ["content.resources.0.publisher.icon",""]},
+                {"ne": ["content.resources.0.publisher.selfPic",""]},
+                {"eq": ["content.resources.0.type", "v_short_youtube"]},
+                {"ne": ["content.resources.0.id",""]},
+                {"ne": ["content.resources.0.name",""]},
+                {"ne": ["content.resources.0.picList",""]},
+                {"ne": ["content.resources.0.playCount",""]},
+                {"ne": ["content.resources.0.publishTime",""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "parameters": [
+                {"channel_name": ["Hit%20Bollywood%20Music","Hit%20Bollywood%20Music?from=more&nextToken=$nextToken"]}
+            ],
+            "name": "qa_check_v3_channel_HitBollywoodMusic_2",
+            "request": {
+                "url": "/v3/channel/$channel_name",
+                "method": "GET"
+            },
+            "extract": [
+                {"nextToken": "content.nextToken"}
+            ],
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "channelres"]},
+                {"ne": ["content.nextToken", ""]},
+                {"ne": ["content.resources", ""]},
+                {"eq": ["content.resources.0.type", "mv_singer_album"]},
+                {"ne": ["content.resources.0.id",""]},
+                {"ne": ["content.resources.0.name",""]},
+                {"ne": ["content.resources.0.singer",""]},
+                {"ne": ["content.resources.0.singer.type",""]},
+                {"ne": ["content.resources.0.singer.id",""]},
+                {"ne": ["content.resources.0.singer.name",""]},
+                {"ne": ["content.resources.0.singer.icon",""]},
+                {"ne": ["content.resources.0.singer.selfPic",""]},
+                {"ne": ["content.resources.0.icon",""]},
+                {"ne": ["content.resources.0.selfPic",""]},
+                {"ne": ["content.resources.0.publishTime",""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "parameters": [
+                {"channel_name": ["Most%20Viral%20Shows","Most%20Viral%20Shows?from=more&nextToken=$nextToken","Featured%20TV%20Shows","Featured%20TV%20Shows?from=more&nextToken=$nextToken"]                }
+            ],
+            "name": "qa_check_v3_channel_MostViralShow_4",
+            "request": {
+                "url": "/v3/channel/$channel_name",
+                "method": "GET"
+            },
+            "extract": [
+                {"nextToken": "content.nextToken"}
+            ],
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "channelres"]},
+                {"ne": ["content.resources", ""]},
+                {"eq": ["content.resources.0.type", "tv_show_lite"]},
+                {"ne": ["content.resources.0.id",""]},
+                {"ne": ["content.resources.0.name",""]},
+                {"ne": ["content.resources.0.icon",""]},
+                {"ne": ["content.resources.0.selfPic",""]},
+                {"ne": ["content.resources.0.langs",""]},
+                {"ne": ["content.resources.0.langs.0.type",""]},
+                {"ne": ["content.resources.0.langs.0.name",""]},
+                {"ne": ["content.resources.0.langs.0.id",""]},
+                {"ne": ["content.resources.0.genres",""]},
+                {"ne": ["content.resources.0.genres.0.id",""]},
+                {"ne": ["content.resources.0.genres.0.name",""]},
+                {"ne": ["content.resources.0.genres.0.type",""]}
+            ]
+        }
+    }
+]

@@ -1,0 +1,5 @@
+test_search_text:
+  text: "搜索歌曲、艺术家、专辑…"
+
+test_add_to_my_favorite:
+  toast: "已添加歌曲到您的最爱。"

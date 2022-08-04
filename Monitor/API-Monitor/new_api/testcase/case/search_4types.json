@@ -1,0 +1,116 @@
+[
+    {
+        "config": {
+            "name": "/v1/search",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_search_sections",
+            "request": {
+                "url": "/v1/search/sections",
+                "params": {
+                    "action": "click_local",
+                    "keyword": "t"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "search_section_list"]},
+                {"ne": ["content.qid", ""]},
+                {"len_ge": ["content.resources", 2]},
+                {"ne": ["content.resources.0.flowFlag", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "normal"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.resources.0.resources.0.resources", 1]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_search_sections",
+            "request": {
+                "url": "/v1/paging/search/sections",
+                "params": {
+                    "action": "type_query",
+                    "qid": "JFUzSG8go4fdO7w1X5QwN",
+                    "section": "shorts",
+                    "keyword": "t"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "paging"]},
+                {"ne": ["content.nextUrl", ""]},
+                {"len_ge": ["content.resources", 2]},
+                {"ne": ["content.resources.0.attach", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.resources.0.seek_thumbnail.0.url", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_search_suggestion",
+            "request": {
+                "url": "/v1/search/suggestion",
+                "params": {
+                    "keyword": "t"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "search_sugg"]},
+                {"ne": ["content.resources", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_search_hotquery",
+            "request": {
+                "url": "/v1/search/hotquery",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "search_hot"]},
+                {"ne": ["content.resources", ""]}
+            ]
+        }
+    }
+]

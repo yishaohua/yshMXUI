@@ -1,0 +1,48 @@
+[
+    {
+        "config": {
+            "name": "v1_paging_card_buzz",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "authorization":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IntmYn17MTE5OTE5NDMyMTk0MzE3fSJ9.0hKFlWX28xNicM5CxcUYb2LjlydynpLce-2HZjNTPfw",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_card_buzz",
+            "request": {
+                "url": "/v1/paging/card/buzz?next=a693b05d1b6fb5b573ae57c02682d532",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "paging"]},
+                {"ne": ["content.nextUrl", ""]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "shortvideo_video"]},
+                {"ne": ["content.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.resources.0.seek_thumbnail.0.url", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    }
+]

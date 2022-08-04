@@ -1,0 +1,45 @@
+test_click_albums_tab:
+  text: "搜索专辑…"
+
+test_click_songs_tab:
+  text: "搜索歌曲…"
+
+test_click_artists_tab:
+  text: "搜索艺术家…"
+
+test_click_files_tab:
+  text: "搜索文件夹…"
+
+test_search_song:
+  song: "十七岁的雨季"
+
+test_click_play_next:
+  toast: "已添加 1 首歌曲到队列"
+
+test_add_play_later:
+  toast: "已添加 1 首歌曲到队列"
+
+test_add_favorite:
+  toast: "已添加歌曲到您的最爱"
+
+test_add_playlist:
+  playlist: "test_local"
+  toast: "已添加 1 首歌曲到播放列表“test_local”"
+
+test_set_as_phone_ringtone:
+  toast: "成功设置为电话铃声"
+
+test_set_as_alarm_ringtone:
+  toast: "成功设置为闹钟铃声"
+
+test_set_as_notification_ringtone:
+  toast: "成功设置为通知铃声"
+
+test_rename_song:
+  new_name: "new_song"
+
+test_click_attribute:
+  title: "文件"
+
+test_delete_song:
+  toast: "已从库中删除歌曲"

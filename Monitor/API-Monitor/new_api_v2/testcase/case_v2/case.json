@@ -1,0 +1,948 @@
+[
+    {
+        "config": {
+            "parameters": [
+             {"ip": ["172.32.25.43","172.32.25.213","172.32.25.19","172.32.25.192","172.32.25.121","172.32.25.50","172.32.25.73","172.32.25.82"]}
+            ],
+            "name": "$ip",
+            "variables": {
+                "movie_film_id":"97305a59f0dc85a9c697c1e1fe1c7c66",
+		"music_album_id":"4066d8bfb6c6ab784602953f689c57f0",
+                "music_artist_id":"aaaa9f9a42da24d1e96c254ed68a0752",
+                "music_mv_id":"8546d058dc8edbf837761f1f09cef3d8",
+                "music_playlist_id":"85e348b09b90271c388dfa692dc128e8",
+                "publisher_id":"6b74f54129d4e686a9f280be2dcf0343",
+                "shortvideo_video_id":"c9389f588073a8a5ee3dced20374c1bc",
+                "tvshow_episode_id":"d37f99866c4507b808050e1bbc024ea7",
+                "tvshow_season_id":"551c04c35d11631c43dcf5c64946c91a",
+                "tvshow_episode_id":"d37f99866c4507b808050e1bbc024ea7",
+                "tvshow_show_id":"b2b9b935832a6b9f7847db70ac36b216"
+            },
+            "request": {
+                "base_url": "http://$ip:4000",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "authorization":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IntmYn17MTE5OTE5NDMyMTk0MzE3fSJ9.0hKFlWX28xNicM5CxcUYb2LjlydynpLce-2HZjNTPfw",
+                    "Accept-Encoding": "gzip"
+                },
+                "json": {
+                    "token": "EAALlLU8BfZAsBALet0sErDzNaZCQ6FNkqhFKZAnVB7g5ursksLIuDOPYeBOoPRoHy1VjkZBWXB2QfyFMRQKrJ1Pjs5n0THVvwhWXgZBSv4CV2W5ttdgZCD3dxz2kX7pJPAWlFfOdHUa0aQX00dr0clP7CSwb4V8ZAyyMs46rCugYRBSYqEHDQUZCYZApZCRxJRAPxNqRM2c9KBAe5K8PYzKir5UfZAWDiPvVG7ThTEOCStql40LkfZAT7YJx",
+                    "type": "facebook"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_configure",
+            "request": {
+                "url": "/v1/configure",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.rejectLicense", ""]},
+                {"ne": ["content.preloadTime", ""]},
+                {"ne": ["content.onlineOpen", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_movie_film_detail",
+            "request": {
+                "url": "/v1/detail/movie_film/$movie_film_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "movie_film"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "movie_film"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_music_album_detail",
+            "request": {
+                "url": "/v1/detail/music_album/$music_album_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "music_mv"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 2]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "music_mv"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.seek_thumbnail.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_music_artist_detail",
+            "request": {
+                "url": "/v1/detail/music_artist/$music_artist_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "music_artist"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.icon", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 2]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "music_mv"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]},
+
+                {"eq": ["content.redirectVideo.type", "music_mv"]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_music_mv_detail",
+            "request": {
+                "url": "/v1/detail/music_mv/$music_mv_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "music_mv"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"len_ge": ["content.relatedCards", 1]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"ne": ["content.relatedCards.0.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "music_mv"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_music_playlist_detail",
+            "request": {
+                "url": "/v1/detail/music_playlist/$music_playlist_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "music_mv"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "music_mv"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_card_buzz",
+            "request": {
+                "url": "/v1/paging/card/buzz?next=a693b05d1b6fb5b573ae57c02682d532",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"ne": ["content.nextUrl", ""]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "shortvideo_video"]},
+                {"ne": ["content.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.resources.0.seek_thumbnail.0.url", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_card_history",
+            "request": {
+                "url": "/v1/paging/card/history",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_card_subscribe",
+            "request": {
+                "url": "/v1/paging/card/subscribe",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_card_watchlist",
+            "request": {
+                "url": "/v1/paging/card/watchlist",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_tab_home",
+            "request": {
+                "url": "/v1/paging/tab/home",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"ne": ["content.nextUrl", ""]},
+                {"len_ge": ["content.resources", 1]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"len_ge": ["content.resources.0.resources", 1]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_publisher_detail",
+            "request": {
+                "url": "/v1/detail/publisher/$publisher_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.profile.type", "publisher"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.icon", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+
+                {"len_ge": ["content.relatedCards", 2]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 2]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.type", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_search_sections",
+            "request": {
+                "url": "/v1/search/sections",
+                "params": {
+                    "action": "click_local",
+                    "keyword": "t"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "search_section_list"]},
+                {"ne": ["content.qid", ""]},
+                {"len_ge": ["content.resources", 2]},
+                {"ne": ["content.resources.0.flowFlag", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "normal"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"eq": ["content.resources.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.resources.0.resources.0.resources", 1]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_paging_search_sections",
+            "request": {
+                "url": "/v1/paging/search/sections",
+                "params": {
+                    "action": "type_query",
+                    "qid": "JFUzSG8go4fdO7w1X5QwN",
+                    "section": "shorts",
+                    "keyword": "t"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "paging"]},
+                {"ne": ["content.nextUrl", ""]},
+                {"len_ge": ["content.resources", 2]},
+                {"ne": ["content.resources.0.attach", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.type", ""]},
+                {"ne": ["content.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.resources.0.seek_thumbnail.0.url", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_search_suggestion",
+            "request": {
+                "url": "/v1/search/suggestion",
+                "params": {
+                    "keyword": "t"
+                },
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "search_sugg"]},
+                {"ne": ["content.resources", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_search_hotquery",
+            "request": {
+                "url": "/v1/search/hotquery",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "search_hot"]},
+                {"ne": ["content.resources", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_shortvideo_video_detail",
+            "request": {
+                "url": "/v1/detail/shortvideo_video/$shortvideo_video_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "shortvideo_video"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.publisher", ""]},
+                {"ne": ["content.profile.publisher.id", ""]},
+                {"eq": ["content.profile.publisher.type", "publisher"]},
+                {"ne": ["content.profile.publisher.name", ""]},
+                {"ne": ["content.profile.publisher.icon", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"len_ge": ["content.relatedCards", 1]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "shortvideo_video"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.publisher.type", "publisher"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher.icon", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.seek_thumbnail.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tab_buzz",
+            "request": {
+                "url": "/v1/tab/buzz",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"eq": ["content.type", "tab"]},
+                {"ne": ["content.refreshPath", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "card_mini_list"]},
+                {"len_ge": ["content.resources.0.resources", 5]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "card_mini_profile"]},
+                {"ne": ["content.resources.0.resources.0.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources.0.resources.0.nextUrl", ""]},
+                {"eq": ["content.resources.1.type", "paging"]},
+                {"ne": ["content.resources.1.nextUrl", ""]},
+                {"len_ge": ["content.resources.1.resources", 1]},
+                {"ne": ["content.resources.1.resources.0.id", ""]},
+                {"ne": ["content.resources.1.resources.0.name", ""]},
+                {"eq": ["content.resources.1.resources.0.type", "shortvideo_video"]},
+                {"ne": ["content.resources.1.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.1.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.resources.1.resources.0.publisher.icon", ""]},
+                {"ne": ["content.resources.1.resources.0.seek_thumbnail.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tab_movie",
+            "request": {
+                "url": "/v1/tab/movie",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"eq": ["content.type", "tab"]},
+                {"ne": ["content.refreshPath", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "banners"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "banner"]},
+                {"ne": ["content.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tab_music",
+            "request": {
+                "url": "/v1/tab/music",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"eq": ["content.type", "tab"]},
+                {"ne": ["content.refreshPath", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "banners"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "banner"]},
+                {"ne": ["content.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tab_shows",
+            "request": {
+                "url": "/v1/tab/shows",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"eq": ["content.type", "tab"]},
+                {"ne": ["content.refreshPath", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "banners"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "banner"]},
+                {"ne": ["content.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.poster.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tabs",
+            "request": {
+                "url": "/v1/tabs",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"eq": ["content.type", "tabs"]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"eq": ["content.resources.0.type", "tab"]},
+                {"ne": ["content.resources.0.refreshPath", ""]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "banners"]},
+                {"len_ge": ["content.resources.0.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.resources.0.resources.0.resources.0.type", "banner"]},
+                {"ne": ["content.resources.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.resources.0.resources.0.type", ""]},
+                {"eq": ["content.resources.0.resources.1.type", "paging"]},
+                {"ne": ["content.resources.0.resources.1.nextUrl", ""]},
+                {"len_ge": ["content.resources.0.resources.1.resources", 1]},
+                {"ne": ["content.resources.0.resources.1.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.1.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.1.resources.0.type", ""]},
+
+                {"ne": ["content.resources.1.id", ""]},
+                {"ne": ["content.resources.1.name", ""]},
+                {"eq": ["content.resources.1.type", "tab"]},
+                {"ne": ["content.resources.1.refreshPath", ""]},
+
+                {"len_ge": ["content.resources", 5]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tvshow_episode_detail",
+            "request": {
+                "url": "/v1/detail/tvshow_episode/$tvshow_episode_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "tvshow_episode"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "season"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "season_info"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.type", "paging"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.type", "tvshow_episode"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.seek_thumbnail.0.url", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tvshow_season_detail",
+            "request": {
+                "url": "/v1/detail/tvshow_season/$tvshow_season_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "tvshow_episode"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "season"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "season_info"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.type", "paging"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.type", "tvshow_episode"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.seek_thumbnail.0.url", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tvshow_show_detail",
+            "request": {
+                "url": "/v1/detail/tvshow_show/$tvshow_show_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "tvshow_show"]},
+                {"ne": ["content.profile.icon", ""]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "season"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "season_info"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.type", "tvshow_episode"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.redirectVideo.id", ""]},
+                {"ne": ["content.redirectVideo.name", ""]},
+                {"eq": ["content.redirectVideo.type", "tvshow_episode"]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_add_history",
+            "request": {
+                "url": "/v1/ua/add/history",
+                "json": {
+                    "resources": [
+                        {
+                            "resourceType": "tvshow_episode",
+                            "videoId": "e07191b45f8600dda626dfe8ea5ba7c8",
+                            "watchAt": 0
+                        },
+                        {
+                            "resourceType": "tvshow_episode",
+                            "videoId": "f8a6f6bfc241225e4a07874bfd7c6608",
+                            "watchAt": 0
+                        }
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_query_history",
+            "request": {
+                "url": "/v1/ua/query/history",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "history"]},
+                {"eq": ["content.resources.0.type", "paging"]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.type", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_remove_history",
+            "request": {
+                "url": "/v1/ua/remove/history",
+                "json": {
+                    "resourceIds": [
+                        "e07191b45f8600dda626dfe8ea5ba7c8"
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_add_subscribe",
+            "request": {
+                "url": "/v1/ua/add/subscribe",
+                "json": {
+                    "resources": [
+                        {
+                                "id": "ad9031300d4ce990db518b667e530813",
+	                    	"type": "music_artist"
+                        }
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_query_subscribe",
+            "request": {
+                "url": "/v1/ua/query/subscribe",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "subscribe"]},
+                {"eq": ["content.resources.0.type", "paging"]},
+                {"ne": ["content.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.type", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_remove_subscribe",
+            "request": {
+                "url": "/v1/ua/remove/subscribe",
+                "json": {
+                    "resourceIds": [
+                        "c1d0e50a077e63198bed4e093dc1ebc6"
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_add_watchlist",
+            "request": {
+                "url": "/v1/ua/add/watchlist",
+                "json": {
+                    "resources": [
+                        {
+		                    "id": "4da67b58d24a4d904661d85fba88c899",
+		                    "type": "music_playlist"
+                        }
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_query_watchlist",
+            "request": {
+                "url": "/v1/ua/query/watchlist",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "watchlist"]},
+                {"eq": ["content.resources.0.type", "paging"]},
+                {"ne": ["content.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.type", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_remove_watchlist",
+            "request": {
+                "url": "/v1/ua/remove/watchlist",
+                "json": {
+                    "resourceIds": [
+                        "4da67b58d24a4d904661d85fba88c899"
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_user_login",
+            "request": {
+                "url": "/v1/user/login",
+                "method": "POST"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.avatar", ""]},
+                {"ne": ["content.settings.lang", ""]},
+                {"ne": ["content.token", ""]}
+
+            ]
+        }
+    }
+]

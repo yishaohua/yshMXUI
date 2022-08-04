@@ -1,0 +1,2 @@
+#!/bin/bash
+python2 /Users/xin.xu/Documents/MXQA/Automation-Android/Tools/mx_install/mx_install.py $1 $2

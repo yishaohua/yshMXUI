@@ -1,0 +1,23 @@
+page：完成对页面的封装
+APP：安装 卸载 启动 前期权限处理
+driver：完成对web Android/iOS 接口的驱动
+testcase：调用各类page完成业务流程并进行断言
+data：配置文件和数据驱动
+utils：其他便捷的功能封装
+
+
+requirements：项目的环境依赖
+
+测试用例管理：
+    用例组织结构：
+        使用package管理业务模块
+        使用class管理业务对象，使用method完成业务具体行为
+    数据驱动：
+        测试数据
+        测试步骤
+        测试断言
+    测试用例：
+        使用testcase完成测试步骤的定义
+        使用assertion完成业务正确性校验
+    持续集成：
+        使用jenkins完成持续集成

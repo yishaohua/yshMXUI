@@ -1,0 +1,30 @@
+test_click_show_card:
+  title: "SHOWS"
+
+test_click_movies_card:
+  title: "MOVIES"
+
+test_click_music_card:
+  title: "MUSIC"
+
+test_click_live_tv_card:
+  title: "LIVE TV"
+
+test_click_shorts_card:
+  title: "SHORTS"
+
+test_search_video:
+  - "hello"
+  - "Girgit"
+
+# 需要定时更新热门搜索列表前9
+test_get_hot_list:
+  - 'Campus Diaries'
+  - 'India’s Got Talent'
+  - 'Shark Tank India'
+  - 'Hero: Gayab Mode On'
+  - 'Parker (Hindi Dubbed)'
+  - 'Indori Ishq'
+  - '211 (Hindi Dubbed)'
+  - 'Mythica: A Quest For Heroes (Hindi Dubbed)'
+  - 'FLAMES'

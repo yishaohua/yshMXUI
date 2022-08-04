@@ -1,0 +1,85 @@
+[
+    {
+        "config": {
+            "name": "/v1/ua/add",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Platform": "android",
+                    "authorization":"${get_auth()}",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_add_watchlist",
+            "request": {
+                "url": "/v1/ua/add/watchlist",
+                "json": {
+                    "resources": [
+                        {
+		                    "id": "4da67b58d24a4d904661d85fba88c899",
+		                    "type": "music_playlist"
+                        }
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_query_watchlist",
+            "request": {
+                "url": "/v1/ua/query/watchlist",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"eq": ["content.type", "watchlist"]},
+                {"eq": ["content.resources.0.type", "paging"]},
+                {"ne": ["content.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.resources.0.resources", 1]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.type", ""]}
+
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "v1_ua_remove_watchlist",
+            "request": {
+                "url": "/v1/ua/remove/watchlist",
+                "json": {
+                    "resourceIds": [
+                        "4da67b58d24a4d904661d85fba88c899"
+                    ]
+                },
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    }
+]

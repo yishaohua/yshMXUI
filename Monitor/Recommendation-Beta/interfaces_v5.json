@@ -1,0 +1,627 @@
+{
+  "interfaces_V5": [
+     {
+      "attrDict":{
+          "interfaceName":"mxbeta_version_5_0",
+          "channel":"Most Viral Shows",
+          "num":10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Most_Viral_Shows_version_5_0"
+    },{
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Featured TV Shows",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Featured_TV_Shows_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Hit Makers",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Hit_Makers_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Hit Bollywood Music",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Hit_Bollywood_Music_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Viral Bollywood Hits",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Viral_Bollywood_Hits_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "International Hits",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_International_Hits_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Hot Punjabi Songs",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Hot_Punjabi_Songs_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Bhojpuri Mania",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Bhojpuri_Mania_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Classic Hits",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Classic_Hits_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Legendary Ghazals",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Legendary_Ghazals_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Hits From Across The Border",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Hits_From_Across_The_Border_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Bollywood Hulchul",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Bollywood_Hulchul_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Comedy Ke Funde",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Comedy_Ke_Funde_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Dance Pe Chance",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Dance_Pe_Chance_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Filmy Duniya",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Filmy_Duniya_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "PAN India Music",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_PAN_India_Music_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "South Cinema",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_South_Cinema_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Bhakti Sagar",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Bhakti_Sagar_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "TV Shows & Drama",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_TV_Shows_Drama_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Pink Corner",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Pink_Corner_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Featured",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Featured_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Devotion",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Devotion_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "News",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_News_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Toons",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Toons_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Sports",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Sports_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Tech World",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"Card_Tech_World_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "mxbeta_version_5_0",
+          "channel": "Top Charts",
+          "num": 1
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Card_Top_Charts_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "tv_show_of_the_same_language_version_5_0",
+          "languageId": "99e5578aa53018e1be1b5d65d84c2ff4",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"tv_show_of_the_same_language_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "all_seasons_by_episode_version_5_0",
+          "id": "5b08da6d0daf454cfffe354c0228f0c6",
+          "num": 1
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"all_seasons_by_episode_version_5_0"
+    },    
+    {
+      "attrDict":{
+          "interfaceName": "relevant_shrot_video_by_episode_version_5_0",
+          "id": "5b08da6d0daf454cfffe354c0228f0c6",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"relevant_shrot_video_by_episode_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "tv_show_of_the_same_genre_version_5_0",
+          "genresId": "838502e01ebad21be4e990c0aeb76104",
+          "num": 6
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"tv_show_of_the_same_genre_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "tv_show_of_the_genre_composite_version_5_0",
+          "genresId": "838502e01ebad21be4e990c0aeb76104",
+          "num": 6
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"tv_show_of_the_genre_composite_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "songs_of_the_same_language_version_5_0",
+          "languageId": "99e5578aa53018e1be1b5d65d84c2ff4",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"songs_of_the_same_language_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "songs_of_the_same_genre_version_5_0",
+          "genresId": "97801b0334918add5f80552fea5ab772",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"songs_of_the_same_genre_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "songs_of_the_genre_composite_version_5_0",
+          "genresId": "0492596215f7b69fca4fc8bfe272f460",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"songs_of_the_genre_composite_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "most_recent_of_publisher_version_4_0",
+          "publisherId": "2e112800103583097b504f34368fb72d",
+          "type": 0,
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"most_recent_of_publisher_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "most_popular_of_publisher_version_4_0",
+          "publisherId": "2e112800103583097b504f34368fb72d",
+          "type": 0,
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"most_popular_of_publisher_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "seasons_version_4_0",
+          "channelId":"ea8cc4462617188a48dc887c95731be4",
+          "num": 1
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"seasons_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "episodes_one_season_version_4_0",
+          "channelId":"ea8cc4462617188a48dc887c95731be4",
+          "type": 0,
+          "num": 8
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"episodes_one_season_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "episodes_of_the_season_version_4_0",
+          "albumId":"2dfe98d86b75d4d34ef780c447433cfd",
+          "type": 0,
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"episodes_of_the_season_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "other_songs_of_the_singer_version_4_0",
+          "id":"7853eb82cde1c06fb389b5ed955a3dae",
+          "channelId":"43928f6d979b6526dfd4cfc493dc14b2",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"other_songs_of_the_singer_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "popular_songs_of_the_album_version_4_0",
+          "id":"b60d007c72fc6c8d25723b256afd9570",
+          "albumId":"8cd34caa4105458cd3129763002b212f",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"popular_songs_of_the_album_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "popular_songs_of_the_singer_version_4_0",
+          "id":"bcb6139322ee56613ba59f52831ef060",
+          "channelId":"43928f6d979b6526dfd4cfc493dc14b2",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"popular_songs_of_the_singer_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "popular_albums_of_the_singer_version_4_0",
+          "albumId":"bdb8d2286402d9467429981cf5559ad9",
+          "channelId":"43928f6d979b6526dfd4cfc493dc14b2",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"popular_albums_of_the_singer_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "other_songs_of_the_album_version_4_0",
+          "albumId":"8cd34caa4105458cd3129763002b212f",
+          "id":"b60d007c72fc6c8d25723b256afd9570",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"other_songs_of_the_album_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "facebook_profile_version_4_0",
+          "userId":"f-1808869232736448",
+          "channel":"Top Recommedations For You",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"facebook_profile_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "other_songs_of_the_playlist_version_5_0",
+          "playlistId":"8f9bd8cc437fa09ae617a71e1ea79ff1",
+          "id":"8d9d31d7455ec6d03fdb87bf7813a85e",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"other_songs_of_the_playlist_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "other_albums_of_the_singer_version_4_0",
+          "channelId":"43928f6d979b6526dfd4cfc493dc14b2",
+          "albumId":"bdb8d2286402d9467429981cf5559ad9",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"other_albums_of_the_singer_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "all_songs_of_the_playlist_version_5_0",
+          "playlistId":"8f9bd8cc437fa09ae617a71e1ea79ff1",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"all_songs_of_the_playlist_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "you_may_also_like_songs_version_5_0",
+          "num": 1
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"you_may_also_like_songs_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "bollywoodfilm_version_4_0",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"bollywoodfilm_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "youtubehot_version_4_0",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"youtubehot_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "get_history_version_4_0",
+          "userId": "a-dc3c3fcd-d18e-473a-a754-0b46de2ba3d8010",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"get_history_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "top_video_pick_for_you_version_5_0",
+          "userId": "f-2012656928965593",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"top_video_pick_for_you_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "top_music_pick_for_you_version_5_0",
+          "userId": "f-1808869232736448",
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"top_music_pick_for_you_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "same_episodes_version_4_0",
+          "id": "ffd4ba799b24d4b2833e276f5ad04591",
+          "type": 0,
+          "num": 10
+      },
+      "reqFunc":"recommend",
+      "resCheck":"resultList",
+      "metric":"same_episodes_version_4_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "Publisher_On_Rise_Version_5_0",
+          "num": 1
+      },
+      "reqFunc":"recommend",
+      "resCheck":"detailList",
+      "metric":"Publisher_On_Rise_Version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "banner_version_5_0",
+          "num": 1
+      },
+      "reqFunc":"fetchBannerData",
+      "resCheck":"banner",
+      "metric":"banner_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "banner_for_music_version_5_0",
+          "num": 1
+      },
+      "reqFunc":"fetchBannerData",
+      "resCheck":"banner",
+      "metric":"banner_for_music_version_5_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName": "banner_editor_choice_version_5_0",
+          "num": 1
+      },
+      "reqFunc":"fetchBannerData",
+      "resCheck":"banner",
+      "metric":"banner_editor_choice_version_5_0"
+    },
+    {
+      "attrDict":{
+          "category": "song",
+          "num": 1
+      },
+      "reqFunc":"getGenresList",
+      "resCheck":"genres",
+      "metric":"song_version_5_0"
+    },
+    {
+      "attrDict":{
+          "category": "tv_show",
+          "num": 1
+      },
+      "reqFunc":"getGenresList",
+      "resCheck":"genres",
+      "metric":"tv_show_version_5_0"
+    }
+  ]
+}

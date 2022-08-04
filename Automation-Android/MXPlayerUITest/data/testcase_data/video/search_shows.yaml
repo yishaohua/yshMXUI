@@ -1,0 +1,33 @@
+test_queue_items_text:
+  items:
+    - "人气"
+    - "新旧"
+
+test_queue_by_time:
+  item: "新旧"
+
+test_choose_language_filter:
+  language: "English"
+
+test_choose_genre_filter:
+  genre: "Crime"
+
+test_choose_actor_filter:
+  actor: "Rahul Ravi"
+
+test_choose_release_year_filter:
+  release year: "2020"
+
+test_multiple_choice:
+  language:
+    - "Hindi"
+    - "English"
+  genre:
+    - "Crime"
+    - "Action"
+  actor:
+    - "Rahul Ravi"
+  release year:
+    - "2020"
+    - "2019"
+

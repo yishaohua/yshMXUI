@@ -1,0 +1,25 @@
+search_video: "Bloodshot"
+
+test_choose_language_filter:
+  language:
+    - "Hindi"
+
+test_choose_duration_filter:
+  duration: "> 60 mins"
+
+test_choose_release_year_filter:
+  release year:
+    - "2020"
+
+test_multiple_choice:
+  language:
+    - "Hindi"
+    - "English"
+  duration:
+    - "> 60 mins"
+  release year:
+    - "2020"
+    - "2019"
+
+test_open_download_switch:
+  title: "Hacker"

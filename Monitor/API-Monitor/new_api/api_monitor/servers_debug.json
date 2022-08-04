@@ -1,0 +1,14 @@
+{
+  "servers_debug": [
+    {
+      "endpoint":"betaserver-dev1",
+      "address":"ec2-35-154-68-167.ap-south-1.compute.amazonaws.com"
+    }
+  ],
+  "servers_debug": [
+    {
+      "endpoint":"betaserver-dev2",
+      "address":"ec2-35-154-68-167.ap-south-1.compute.amazonaws.com"
+    }
+  ]
+}

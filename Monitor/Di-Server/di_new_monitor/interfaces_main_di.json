@@ -1,0 +1,204 @@
+{
+  "interfaces_V5": [
+     {
+      "attrDict":{
+	  "ids":["85e348b09b90271c388dfa692dc128e8"],
+          "type":"playlist",
+          "num": 1
+      },
+      "metric":"DI_Service_playlist_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["97305a59f0dc85a9c697c1e1fe1c7c66"],
+	  "type":"movie",
+          "num": 1
+      },
+      "metric":"DI_Service_movie_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["c9389f588073a8a5ee3dced20374c1bc"],
+	  "type":"short_video",
+          "num": 1
+      },
+      "metric":"DI_Service_short_video_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["hi"],
+	  "type":"language",
+          "num": 1
+      },
+      "metric":"DI_Service_language_version_5_0"
+    },
+     {
+      "attrDict":{
+          "ids":["5492e591ea1ce9038c80c8c2c1b797f7"],
+	  "type":"genre",
+          "num": 1
+      },
+      "metric":"DI_Service_genre_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["e7ea1ed6e66d624a91709da74ea1cb48"],
+	  "type":"actor",
+          "num": 1
+      },
+      "metric":"DI_Service_actor_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["bfd5ddaded35e0104ca5fe392db0e9f2"],
+	  "type":"director",
+          "num": 1
+      },
+      "metric":"DI_Service_director_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["72680dce6cccadbf80c116166f64da79"],
+	  "type":"song",
+          "num": 1
+      },
+      "metric":"DI_Service_song_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["dcd95ce6952324e7e15cf1e1cf93a4ff"],
+	  "type":"album",
+          "num": 1
+      },
+      "metric":"DI_Service_album_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["a1210a8130b80165f78d59a93d4f16fa"],
+	  "type":"singer",
+          "num": 1
+      },
+      "metric":"DI_Service_singer_version_5_0"
+    },
+     {
+      "attrDict":{
+	 "ids":["551c04c35d11631c43dcf5c64946c91a"],
+	  "type":"season",
+          "num": 1
+      },
+      "metric":"DI_Service_season_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["b2b9b935832a6b9f7847db70ac36b216"],
+	  "type":"tv_show",
+          "num": 1
+      },
+      "metric":"DI_Service_tv_show_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["d37f99866c4507b808050e1bbc024ea7"],
+	  "type":"tv_show_video",
+          "num": 1
+      },
+      "metric":"DI_Service_tv_show_video_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["0d167a3a82b497239a4d7e88da09f6d0"],
+	  "type":"card",
+          "num": 1
+      },
+      "metric":"DI_Service_card_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["2a50f0eb1e5d47872083ef7254a9239a"],
+	  "type":"card_list",
+          "num": 1
+      },
+      "metric":"DI_Service_card_list_movie_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["1_browse"],
+	  "type":"browse_item",
+          "num": 1
+      },
+      "metric":"DI_Service_browse_item_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["87c3ddc974dcf12294e9412bec44b097"],
+	  "type":"tab",
+          "num": 1
+      },
+      "metric":"DI_Service_tab_home_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["0204.MusicIndia.in"],
+	  "type":"live_channel",
+          "num": 1
+      },
+      "metric":"DI_Service_live_channel_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["match_112840_41301"],
+	  "type":"cricket",
+          "num": 1
+      },
+      "metric":"DI_Service_cricket_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["89a91522f6bf34832b6ae7eace16a588"],
+	  "type":"cricket_widget",
+          "num": 1
+      },
+      "metric":"DI_Service_cricket_widget_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["0b2cb18f7600a416562e96ef1f9cf439"],
+	  "type":"offer",
+          "num": 1
+      },
+      "metric":"DI_Service_offer_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["qst_546baa21f5"],
+	  "type":"question",
+          "num": 1
+      },
+      "metric":"DI_Service_question_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["df05aa4ad6e0f3698352371108d415a0"],
+	  "type":"vendor",
+          "num": 1
+      },
+      "metric":"DI_Service_vendor_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["a1210a8130b80165f78d59a93d4f16fa"],
+	  "type":"artist",
+          "num": 1
+      },
+      "metric":"DI_Service_artist_version_5_0"
+    },
+     {
+      "attrDict":{
+	  "ids":["6b74f54129d4e686a9f280be2dcf0343"],
+	  "type":"publisher",
+          "num": 1
+      },
+      "metric":"DI_Service_publisher_version_5_0"
+    }
+   ]
+}

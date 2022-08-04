@@ -1,0 +1,56 @@
+[
+    {
+        "config": {
+            "name": "testset description",
+            "parameters": [
+                {"search_path": [{"q": "ty","t": "fromInput","by": "v_short_youtube"}, {"q": "ty","t": "fromHistory","by": "v_short_youtube"},{"q": "tyt%20network","t": "fromList","by": "v_short_youtube"},{"q": "baadshaho","t": "fromHotWord","by": "v_short_youtube"}]}
+            ],
+            "request": {
+                "base_url": "https://mxbeta-feeds-staging.zenmxapps.com",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "testb655-605b-41f1-bd16-ce2e168c02b91171887",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "punjabi;bengali;kannada",
+                    "X-Platform": "android"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_search_frominput_4",
+            "request": {
+                "params": "$search_path",
+                "url": "/v3/search",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "search_wrap"]},
+                {"ne": ["content.resources", ""]},
+                {"eq": ["content.resources.0.type", "search_res"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube",""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.videoId",""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.srcURL",""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.shareURL",""]},
+                {"ne": ["content.resources.0.resources.0.publisher",""]},
+                {"ne": ["content.resources.0.resources.0.publisher.type",""]},
+                {"ne": ["content.resources.0.resources.0.publisher.id",""]},
+                {"ne": ["content.resources.0.resources.0.publisher.name",""]},
+                {"ne": ["content.resources.0.resources.0.publisher.icon",""]},
+                {"ne": ["content.resources.0.resources.0.publisher.selfPic",""]},
+                {"eq": ["content.resources.0.resources.0.type", "v_short_youtube"]},
+                {"ne": ["content.resources.0.resources.0.id",""]},
+                {"ne": ["content.resources.0.resources.0.name",""]},
+                {"ne": ["content.resources.0.resources.0.picList",""]},
+                {"ne": ["content.resources.0.resources.0.playCount",""]},
+                {"ne": ["content.resources.0.resources.0.publishTime",""]}
+            ]
+        }
+    }
+]

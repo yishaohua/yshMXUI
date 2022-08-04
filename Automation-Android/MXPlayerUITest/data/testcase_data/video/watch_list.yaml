@@ -1,0 +1,11 @@
+test_title:
+  title: "待看列表"
+
+test_delete_one_video:
+  toast: "从待看列表移除"
+
+test_delete_all_video:
+  toast: "从待看列表移除"
+
+test_default_text:
+  text: "待看列表会帮助您记录您想要观看的视频"

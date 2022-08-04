@@ -1,0 +1,28 @@
+{
+  "servers_release": [
+    {
+      "endpoint":"betaserver00",
+      "address":"ec2-52-66-20-159.ap-south-1.compute.amazonaws.com"
+    },
+    {
+      "endpoint":"betaserver01",
+      "address":"ec2-13-126-121-219.ap-south-1.compute.amazonaws.com"
+    },
+    {
+      "endpoint":"betaserver02",
+      "address":"ec2-13-126-75-100.ap-south-1.compute.amazonaws.com"
+    },
+    {
+      "endpoint":"betaserver03",
+      "address":"ec2-13-127-32-60.ap-south-1.compute.amazonaws.com"
+    },
+    {
+      "endpoint":"betaserver04",
+      "address":"ec2-35-154-72-6.ap-south-1.compute.amazonaws.com"
+    },
+    {
+      "endpoint":"betaserver05",
+      "address":"ec2-13-127-39-94.ap-south-1.compute.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+test_title:
+  title: "通知"
+
+test_all_tab_text:
+  tab_list:
+#    - "评论"
+    - "视频"
+    - "游戏"
+    - "系统"

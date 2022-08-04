@@ -1,0 +1,71 @@
+[
+    {
+        "config": {
+            "name": "/v1/detail[GET]",
+            "variables": {
+                "shortvideo_video_id":"c9389f588073a8a5ee3dced20374c1bc"
+            },
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_shortvideo_video_detail",
+            "request": {
+                "url": "/v1/detail/shortvideo_video/$shortvideo_video_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "shortvideo_video"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.publisher", ""]},
+                {"ne": ["content.profile.publisher.id", ""]},
+                {"eq": ["content.profile.publisher.type", "publisher"]},
+                {"ne": ["content.profile.publisher.name", ""]},
+                {"ne": ["content.profile.publisher.icon", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"len_ge": ["content.relatedCards", 1]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "shortvideo_video"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.publisher.type", "publisher"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.publisher.icon", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.seek_thumbnail.0.url", ""]}
+
+            ]
+        }
+    }
+]

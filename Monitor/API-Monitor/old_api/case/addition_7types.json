@@ -1,0 +1,301 @@
+[
+    {
+        "config": {
+            "name": "/v3/addition/feedType/feedId[GET]",
+            "variables": {
+                "addition_tvshow_id":"ea8cc4462617188a48dc887c95731be4",
+                "addition_v_short_youtube_id":"6aeb6deb5e3f6651e161251a5da16b9f",
+                "addition_mv_singer_album_id":"3826c32ecf2c2aff861f4e66b1cf1929",
+                "addition_v_mv_youtube_id":"16082a3bded330c44edbb053859181f4",
+                "addition_publisher_id":"25b000aad8a338356b1e9a2e8a2c3c5d",
+                "addition_mv_songlist_id":"8f9bd8cc437fa09ae617a71e1ea79ff1",
+                "addition_mv_singer_id":"132bdf3e04204332418f6abc736c34cc",
+                "singerId": "6ad37227f75dc298044fec6023cb986c",
+                "albumId": "3826c32ecf2c2aff861f4e66b1cf1929",
+                "publisherId": "970ae217dd6cd573437f4929f7254ba3"
+            },
+            "request": {
+                "base_url": "https://mxbeta-feeds-staging.zenmxapps.com",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "testb655-605b-41f1-bd16-ce2e168c02b91171887",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_publisher",
+            "request": {
+                "url": "/v3/addition/publisher/$addition_publisher_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_publisher"]},
+                {"eq": ["content.resources.0.type", "card_publisher_latest"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.videoId", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.srcURL", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.shareURL", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.id", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.name", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.selfPic", ""]},
+                {"eq": ["content.resources.0.resources.0.publisher.type", "publisher_lite"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "v_short_youtube"]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.picList", ""]},
+                {"ne": ["content.resources.0.resources.0.duration", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]},
+                {"ne": ["content.resources.0.resources.0.playCount", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_mv_singer",
+            "request": {
+                "url": "/v3/addition/mv_singer/$addition_mv_singer_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_mv_singer"]},
+                {"eq": ["content.resources.0.type", "card_mv_singer_popsongs"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.style", ""]},
+                {"ne": ["content.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.videoId", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.srcURL", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.shareURL", ""]},
+                {"eq": ["content.resources.0.resources.0.singer.type", "mv_singer_lite"]},
+                {"ne": ["content.resources.0.resources.0.singer.id", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.name", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.selfPic", ""]},
+                {"ne": ["content.resources.0.resources.0.albumId", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.type", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "v_mv_youtube"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.picList", ""]},
+                {"ne": ["content.resources.0.resources.0.duration", ""]},
+                {"ne": ["content.resources.0.resources.0.playCount", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_mv_songlist",
+            "request": {
+                "url": "/v3/addition/mv_songlist/$addition_mv_songlist_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_mv_songlist"]},
+                {"eq": ["content.resources.0.type", "card_mv_rcmdsongs"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.style", ""]},
+                {"ne": ["content.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.videoId", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.srcURL", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.shareURL", ""]},
+                {"eq": ["content.resources.0.resources.0.singer.type", "mv_singer_lite"]},
+                {"ne": ["content.resources.0.resources.0.singer.id", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.name", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.selfPic", ""]},
+                {"ne": ["content.resources.0.resources.0.albumId", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.type", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "v_mv_youtube"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.picList", ""]},
+                {"ne": ["content.resources.0.resources.0.duration", ""]},
+                {"ne": ["content.resources.0.resources.0.playCount", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_v_mv_youtube",
+            "request": {
+                "params": {
+                    "singerId": "$singerId",
+                    "albumId": "$albumId"
+                },
+                "url": "/v3/addition/v_mv_youtube/$addition_v_mv_youtube_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_mv_youtube"]},
+                {"eq": ["content.resources.0.type", "card_mv_album_othersongs"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.style", ""]},
+                {"ne": ["content.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.videoId", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.srcURL", ""]},
+                {"ne": ["content.resources.0.resources.0.v_mv_youtube.shareURL", ""]},
+                {"eq": ["content.resources.0.resources.0.singer.type", "mv_singer_lite"]},
+                {"ne": ["content.resources.0.resources.0.singer.id", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.name", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.selfPic", ""]},
+                {"ne": ["content.resources.0.resources.0.albumId", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.type", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "v_mv_youtube"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.picList", ""]},
+                {"ne": ["content.resources.0.resources.0.duration", ""]},
+                {"ne": ["content.resources.0.resources.0.playCount", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_mv_singer_album",
+            "request": {
+                "params": {
+                    "singerId": "$singerId"
+                },
+                "url": "/v3/addition/mv_singer_album/$addition_mv_singer_album_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_mv_singer_album"]},
+                {"eq": ["content.resources.0.type", "card_mv_singer_otheralbums"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.style", ""]},
+                {"ne": ["content.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources", ""]},
+                {"eq": ["content.resources.0.resources.0.singer.type", "mv_singer_lite"]},
+                {"ne": ["content.resources.0.resources.0.singer.id", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.name", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.singer.selfPic", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "mv_singer_album"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.selfPic", ""]},
+                {"ne": ["content.resources.0.resources.0.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_v_short_youtube",
+            "request": {
+                "params": {
+                    "publisherId": "$publisherId"
+                },
+                "url": "/v3/addition/v_short_youtube/$addition_v_short_youtube_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_short_youtube"]},
+                {"eq": ["content.resources.0.type", "card_rcmd"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.videoId", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.srcURL", ""]},
+                {"ne": ["content.resources.0.resources.0.v_short_youtube.shareURL", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.id", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.name", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.publisher.selfPic", ""]},
+                {"eq": ["content.resources.0.resources.0.publisher.type", "publisher_lite"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.picList", ""]},
+                {"ne": ["content.resources.0.resources.0.duration", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]},
+                {"ne": ["content.resources.0.resources.0.playCount", ""]}
+            ]
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_addition_tv_show",
+            "request": {
+                "url": "/v3/addition/tv_show/$addition_tvshow_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"len_ge": ["content.resources",1]},
+                {"eq": ["content.type", "addition_tvshow"]},
+                {"eq": ["content.resources.0.type", "card_tvshow_popclips"]},
+                {"ne": ["content.resources.0.id", ""]},
+                {"ne": ["content.resources.0.name", ""]},
+                {"ne": ["content.resources.0.style", ""]},
+                {"ne": ["content.resources.0.moreStyle", ""]},
+                {"ne": ["content.resources", ""]},
+                {"ne": ["content.resources.0.resources.0.v_tv_youtube.videoId", ""]},
+                {"ne": ["content.resources.0.resources.0.v_tv_youtube.srcURL", ""]},
+                {"ne": ["content.resources.0.resources.0.v_tv_youtube.shareURL", ""]},
+                {"ne": ["content.resources.0.resources.0.tvshow.id", ""]},
+                {"ne": ["content.resources.0.resources.0.tvshow.name", ""]},
+                {"ne": ["content.resources.0.resources.0.tvshow.icon", ""]},
+                {"ne": ["content.resources.0.resources.0.tvshow.selfPic", ""]},
+                {"eq": ["content.resources.0.resources.0.tvshow.type", "tv_show_lite"]},
+                {"ne": ["content.resources.0.resources.0.seasonId", ""]},
+                {"eq": ["content.resources.0.resources.0.type", "v_tv_youtube"]},
+                {"ne": ["content.resources.0.resources.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.picList", ""]},
+                {"ne": ["content.resources.0.resources.0.duration", ""]},
+                {"ne": ["content.resources.0.resources.0.publishTime", ""]},
+                {"ne": ["content.resources.0.resources.0.playCount", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.type", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.langs.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.name", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.id", ""]},
+                {"ne": ["content.resources.0.resources.0.genres.0.type", ""]}
+            ]
+        }
+    }
+]

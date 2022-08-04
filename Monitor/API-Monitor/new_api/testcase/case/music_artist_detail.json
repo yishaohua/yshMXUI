@@ -1,0 +1,60 @@
+[
+    {
+        "config": {
+            "name": "/v1/detail[GET]",
+            "variables": {
+                "music_artist_id":"aaaa9f9a42da24d1e96c254ed68a0752"
+            },
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_music_artist_detail",
+            "request": {
+                "url": "/v1/detail/music_artist/$music_artist_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "music_artist"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.icon", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "normal"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 2]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "music_mv"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.poster.0.url", ""]},
+
+                {"eq": ["content.redirectVideo.type", "music_mv"]}
+            ]
+        }
+    }
+]

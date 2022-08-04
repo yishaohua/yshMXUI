@@ -1,0 +1,45 @@
+[
+    {
+        "config": {
+            "name": "/v1/user/login",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                },
+                "json": {
+                    "token": "EAALlLU8BfZAsBALet0sErDzNaZCQ6FNkqhFKZAnVB7g5ursksLIuDOPYeBOoPRoHy1VjkZBWXB2QfyFMRQKrJ1Pjs5n0THVvwhWXgZBSv4CV2W5ttdgZCD3dxz2kX7pJPAWlFfOdHUa0aQX00dr0clP7CSwb4V8ZAyyMs46rCugYRBSYqEHDQUZCYZApZCRxJRAPxNqRM2c9KBAe5K8PYzKir5UfZAWDiPvVG7ThTEOCStql40LkfZAT7YJx",
+                    "type": "facebook"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_user_login",
+            "request": {
+                "url": "/v1/user/login",
+                "method": "POST"
+            },
+            "validate": [
+                {"ne": ["content.id", ""]},
+                {"ne": ["content.name", ""]},
+                {"ne": ["content.avatar", ""]},
+                {"ne": ["content.settings.lang", ""]},
+                {"ne": ["content.token", ""]}
+
+            ]
+        }
+    }
+]

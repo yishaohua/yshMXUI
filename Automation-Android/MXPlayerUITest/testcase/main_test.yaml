@@ -1,0 +1,30 @@
+HOME:
+  banners: 6
+  search_card:
+    - "MX Original Web Shows"
+    - "Top 10 This Week"
+  click_card: "New Release Movies"
+SHOWS:
+  banners: 6
+  search_card:
+      - "Recommended Web Shows"
+      - "Trending in Web Shows"
+  click_card: "Binge On"
+MOVIES:
+  banners: 6
+  search_card:
+      - "Top 10 in Movies"
+      - "Premium Movies"
+  click_card: "Classic Bollywood Hits\t\t\t\t\t\t\t"
+MX VDESI:
+  banners: 6
+  search_card:
+      - "New Releases VDESI"
+      - "Best of MX VDESI"
+  click_card: "International Romance"
+MUSIC:
+  banners: 6
+  search_card:
+      - "MX Top Hits"
+      - "Bollywood Evergreen Hits"
+  click_card: "Retro Hits"

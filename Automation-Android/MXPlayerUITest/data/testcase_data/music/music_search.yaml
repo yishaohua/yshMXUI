@@ -1,0 +1,48 @@
+test_get_hot_list:
+  hot_list:
+    - 'Arijit Singh'
+    - 'Excuses'
+    - 'STAY'
+    - 'Guru Nanak Jayanti'
+    - 'Sidhu Moose Wala'
+    - 'BTS'
+    - 'Raataan Lambiyan'
+    - 'Punjabi Top 50'
+    - 'love nwantiti (feat. ElGrande Toto) [North African Remix]'
+    - 'Pushpa The Rise Part - 01 (Hindi)'
+
+test_search_artist:
+  artist: "Sidhu Moose Wala"
+
+test_search_music:
+  music: "Libaas"
+
+test_add_play_next:
+  toast: "已添加 1 首歌曲到队列"
+
+test_add_play_later:
+  toast: "已添加 1 首歌曲到队列"
+
+test_add_favorite:
+  toast:
+    - "已添加歌曲到您的最爱。"
+    - "载入内容失败。"
+
+test_add_playlist:
+  playlist: "test_playlist"
+  toast: "已添加 1 首歌曲到播放列表“test_playlist”"
+
+test_playlist_text:
+  playlist: "test_playlist"
+
+test_share_text:
+  music: "Guru Nanak Jayanti"
+  app: "Share to mobile"
+
+test_click_more:
+  music: "Guru Nanak Jayanti"
+  options:
+    - "更多 艺术家"
+    - "更多 播放列表"
+    - "更多 专辑"
+    - "更多 音轨"

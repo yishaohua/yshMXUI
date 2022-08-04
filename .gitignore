@@ -1,0 +1,23 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+Automation-Android/UI-Automation-Appium/Config/Desired_caps.json
+.DS_Store
+Automation-Android/UI-Automation-Appium/Testcases/~$testcase.xlsx
+Appium.log
+*Report.html
+
+*.log
+*.html
+*.idea
+mengmai.pem

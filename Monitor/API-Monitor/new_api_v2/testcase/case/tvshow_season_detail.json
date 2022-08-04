@@ -1,0 +1,66 @@
+[
+    {
+        "config": {
+            "name": "/v1/detail[GET]",
+            "variables": {
+                "tvshow_season_id":"551c04c35d11631c43dcf5c64946c91a",
+                "tvshow_episode_id":"d37f99866c4507b808050e1bbc024ea7"
+            },
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "Accept-Encoding": "gzip"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_tvshow_season_detail",
+            "request": {
+                "url": "/v1/detail/tvshow_season/$tvshow_season_id",
+                "method": "GET"
+            },
+            "validate": [
+                {"ne": ["content.profile", ""]},
+                {"eq": ["content.profile.type", "tvshow_episode"]},
+                {"ne": ["content.profile.id", ""]},
+                {"ne": ["content.profile.name", ""]},
+                {"ne": ["content.profile.poster.0.url", ""]},
+                {"ne": ["content.profile.playInfo.0.playUrl", ""]},
+                {"ne": ["content.profile.seek_thumbnail.0.url", ""]},
+
+                {"ne": ["content.relatedCards", ""]},
+                {"ne": ["content.relatedCards.0.id", ""]},
+                {"ne": ["content.relatedCards.0.name", ""]},
+                {"eq": ["content.relatedCards.0.type", "season"]},
+                {"ne": ["content.relatedCards.0.resources", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.type", "paging"]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.id", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.type", "season_info"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.type", "paging"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.refreshUrl", ""]},
+                {"len_ge": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources", 1]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.id", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.name", ""]},
+                {"eq": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.type", "tvshow_episode"]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.poster.0.url", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.playInfo.0.playUrl", ""]},
+                {"ne": ["content.relatedCards.0.resources.0.resources.0.resources.0.resources.0.seek_thumbnail.0.url", ""]}
+            ]
+        }
+    }
+]

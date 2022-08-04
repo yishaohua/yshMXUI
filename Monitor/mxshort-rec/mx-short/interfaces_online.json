@@ -1,0 +1,227 @@
+{
+  "mx_pic_publisher":[
+    {
+      "attrDict":{
+          "interfaceName":"mx_pictures_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":1,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100012586",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_pictures_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_pictures_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":1,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100017660",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_pictures_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_pictures_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":1,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100016718",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_pictures_of_the_publisher_version_1_0"
+    }
+  ],
+  "mx_gif_publisher":[
+    {
+      "attrDict":{
+          "interfaceName":"mx_gifs_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":1,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100012586",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_gifs_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_gifs_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":1,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100017660",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_gifs_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_gifs_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":1,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100016718",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_gifs_of_the_publisher_version_1_0"
+    }
+  ],
+  "mx_video_publisher":[
+    {
+      "attrDict":{
+          "interfaceName":"mx_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":20,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100012586",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":20,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100017660",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_videos_of_the_publisher_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_videos_of_the_publisher_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "num":20,
+          "country": "CN",
+          "resourceType": "publisher",
+          "resourceId": "100016718",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"mx_publisher",
+      "lenthCheck": 1500000,
+      "metric":"mx_videos_of_the_publisher_version_1_0"
+    }
+  ],
+  "mx-short":[
+    {
+      "attrDict":{
+          "interfaceName":"mx_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "tabId": "1",
+          "num":20,
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 1500000,
+      "metric":"mx_main_gif_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "tabId": "2",
+          "num":20,
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 1500000,
+      "metric":"mx_main_hot_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "tabId": "3",
+          "num":20,
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 1500000,
+      "metric":"mx_main_stutas_version_1_0"
+    },
+    {
+      "attrDict":{
+          "interfaceName":"mx_main_version_1_0",
+          "type": 0,
+          "platformId": "1",
+          "tabId": "4",
+          "num":20,
+          "country": "CN",
+          "networkStatus": "3G",
+          "languageList": ["bho", "bn", "en", "gu", "hi", "kn", "ml", "mr", "pa", "ta", "te"]
+      },
+      "reqFunc":"recommend",
+      "resCheck":"result",
+      "lenthCheck": 1500000,
+      "metric":"mx_main_pic_version_1_0"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "servers_debug": [
+    {
+      "endpoint": "mx-mian-dev",
+      "address": "recommendation.dev.mxplay.com"
+    }
+  ]
+}

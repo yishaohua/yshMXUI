@@ -1,0 +1,8 @@
+{
+  "servers_debug": [
+    {
+      "endpoint":"cms_server01",
+      "address":"ec2-13-127-51-34.ap-south-1.compute.amazonaws.com"
+    }
+  ]
+}

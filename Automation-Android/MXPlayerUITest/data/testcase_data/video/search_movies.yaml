@@ -1,0 +1,35 @@
+test_queue_items_text:
+  items:
+    - "人气"
+    - "新旧"
+
+test_queue_by_time:
+  item: "新旧"
+
+test_choose_language_filter:
+  language: "English"
+
+test_choose_genre_filter:
+  genre: "Action"
+
+test_choose_actor_filter:
+  actor: "Ali"
+
+test_choose_director_filter:
+  director: "Liam Dale"
+
+test_choose_release_year_filter:
+  release year: "2020"
+
+test_multiple_choice:
+  language:
+    - "Hindi"
+    - "English"
+  genre:
+    - "Short"
+  actor:
+    - "Nassar"
+  director:
+    - "Evan Tramel"
+  release year:
+    - "2020"

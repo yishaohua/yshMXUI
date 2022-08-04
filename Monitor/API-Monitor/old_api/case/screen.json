@@ -1,0 +1,68 @@
+[
+    {
+        "config": {
+            "name": "testset description",
+            "parameters": [
+                {"screen_path": ["v_tv_youtube/fb8dead5905d048d5c8d5a7502a2e70d","tv_show_season/c5a19e77cb3d451761f405a9bb219495"]}
+            ],
+            "request": {
+                "base_url": "https://mxbeta-feeds-staging.zenmxapps.com",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "testb655-605b-41f1-bd16-ce2e168c02b91171887",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "punjabi;bengali;kannada",
+                    "X-Platform": "android"
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "qa_check_v3_screen_tv_youtube_2",
+            "request": {
+                "url": "/v3/screen/$screen_path",
+                "method": "GET"
+            },
+            "validate": [
+                {"eq": ["content.type", "screen_tv_youtube"]},
+                {"ne": ["content.video", ""]},
+                {"ne": ["content.video.v_tv_youtube.videoId",""]},
+                {"ne": ["content.video.v_tv_youtube.srcURL",""]},
+                {"ne": ["content.video.v_tv_youtube.shareURL",""]},
+                {"ne": ["content.video.tvshow.type",""]},
+                {"ne": ["content.video.tvshow.id",""]},
+                {"ne": ["content.video.tvshow.name",""]},
+                {"ne": ["content.video.tvshow.icon",""]},
+                {"ne": ["content.video.tvshow.selfPic",""]},
+                {"ne": ["content.video.seasonId",""]},
+                {"ne": ["content.video.langs.0.type",""]},
+                {"ne": ["content.video.langs.0.id",""]},
+                {"ne": ["content.video.langs.0.name",""]},
+                {"ne": ["content.video.genres.0.type",""]},
+                {"ne": ["content.video.genres.0.id",""]},
+                {"ne": ["content.video.genres.0.name",""]},
+                {"ne": ["content.video.type",""]},
+                {"ne": ["content.video.id",""]},
+                {"ne": ["content.video.name",""]},
+                {"ne": ["content.video.picList",""]},
+                {"ne": ["content.video.duration",""]},
+                {"ne": ["content.video.publishTime",""]},
+                {"ne": ["content.video.playCount",""]},
+                {"ne": ["content.uaInfo.type",""]},
+                {"ne": ["content.uaInfo.id",""]},
+                {"ne": ["content.uaInfo.name",""]},
+                {"ne": ["content.uaInfo.upcount",""]},
+                {"ne": ["content.uaInfo.downcount",""]},
+                {"ne": ["content.uaInfo.updown",""]},
+                {"ne": ["content.uaInfo.isfav",""]},
+                {"ne": ["content.seasonTab.seasons",""]},
+                {"ne": ["content.seasonTab.current",""]}
+            ]
+        }
+    }
+]

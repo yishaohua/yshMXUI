@@ -1,0 +1,41 @@
+[
+    {
+        "config": {
+            "name": "/v1/user/config",
+            "request": {
+                "base_url": "${get_baseurl()}",
+                "verify":"",
+                "headers": {
+                    "User-Agent": "okhttp/2.4.0",
+                    "X-Country": "US",
+                    "X-Lang": "en",
+                    "X-App-Version": "1170000141",
+                    "X-Client-Id": "${get_uuid()}",
+                    "X-AV-Code": "23",
+                    "X-Prefer-Lang": "english",
+                    "X-Platform": "android",
+                    "x-resolution":"1080x1920",
+                    "x-density":"3.0",
+                    "authorization":"${get_auth()}",
+                    "Accept-Encoding": "gzip"
+                },
+                "json": {
+                    "lang": ["english", "hindi"]
+                }
+            }
+        }
+    },
+    {
+        "test": {
+            "name": "v1_user_config",
+            "request": {
+                "url": "/v1/user/config",
+                "method": "POST"
+            },
+            "validate": [
+                {"eq": ["status_code", 200]}
+
+            ]
+        }
+    }
+]

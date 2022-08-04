@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 /Users/qianqian.han/Documents/Work/MXQA/Automation-Android/Tools/deeplink/deeplink.py $1 $2
